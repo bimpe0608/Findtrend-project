@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
+
 /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap'); */
 
 @font-face {
@@ -28,10 +30,13 @@ body {
 }
 
 .section1 {
-  height: 100vh;
+  /* height: 100vh; */
+  width: 100%;
   box-sizing: border-box;
   background-image: url("./Assets/Images/Bg-hero.svg");
-  background-repeat: no-repeat;
+  background-size: 100%;
+  background-repeat: repeat;
+  background-position: center center;
   object-fit: cover;
 }
 
@@ -42,17 +47,31 @@ body {
   padding: 0 5%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   border: 3px solid blue;
 }
 
 .logo {
   width: 25%;
   border: 3px solid coral;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo > span {
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  text-align: center;
+  color: #ffffff;
 }
 
 .about {
   width: 50%;
-  border: 3px solid green;
+  /* border: 3px solid green; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -97,23 +116,32 @@ body {
   outline: none;
 }
 
+.nav > div:last-child {
+  border: 2px solid red;
+  display: none;
+}
+
 /* Hero section styling */
 .heroSection {
   border: 3px solid white;
-  height: 110vh;
+  /* height: 110vh; */
 }
 
 .paragraph1 {
-  border: 3px solid cyan;
+  /* border: 3px solid cyan; */
   width: 70%;
   margin: auto;
   box-sizing: border-box;
 }
 
 .paragraph2 {
-  border: 3px solid hotpink;
+  /* border: 3px solid hotpink; */
   width: 50%;
-  margin: auto;
+  margin: 1rem auto;
+}
+
+.paragraph2 > p {
+  margin: 0;
 }
 
 .buttonContainer {
@@ -121,9 +149,10 @@ body {
   text-align: center;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 0.5rem;
-  width: 65%;
+  width: 80%;
+  margin: auto;
 }
 
 .heroImage {
@@ -133,9 +162,9 @@ body {
 }
 
 .heroImage > img {
-    /* width: 100%; */
-    border: 3px solid blue;
-    /* box-sizing: border-box; */
+  width: 80%;
+  border: 3px solid blue;
+  /* box-sizing: border-box; */
 }
 
 /* Hero typography */
@@ -193,10 +222,15 @@ body {
   .paragraph1 p:nth-child(1),
   .paragraph1 p:nth-child(2) {
     font-size: 36px;
+    border: 2px solid red;
+    width: 100%;
+    margin: auto;
   }
 
   .paragraph1 {
     width: 90%;
+    border: 2px solid green;
+    margin: 2rem auto;
   }
 
   .paragraph2 {
@@ -219,5 +253,65 @@ body {
     padding: 0.75rem 1.5rem;
     border: transparent;
     outline: none;
+  }
+
+  .buttonContainer > img {
+    display: none;
+  }
+
+  .logo > span {
+    display: none;
+  }
+
+  .nav > div:last-child {
+    display: block;
+  }
+
+  .about {
+    display: none;
+  }
+
+  .login {
+    display: none;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1023px) {
+  .logo > span {
+    display: none;
+  }
+
+  .nav > div:last-child {
+    display: block;
+  }
+
+  .about {
+    display: none;
+  }
+
+  .login {
+    display: none;
+  }
+
+  .paragraph1 p:nth-child(1),
+  .paragraph1 p:nth-child(2) {
+    font-size: 36px;
+    border: 2px solid red;
+    width: 100%;
+    margin: auto;
+  }
+
+  .paragraph1 {
+    width: 90%;
+    border: 2px solid green;
+    margin: 2rem auto;
+  }
+
+  .paragraph2 {
+    width: 80%;
+  }
+
+  .paragraph2 > p {
+    font-size: 14px;
   }
 }
